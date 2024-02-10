@@ -1,11 +1,11 @@
 ## Reporting Security Issues
 
-If you have found a security vulnerability, please report it to radmanplays.
+If you have found a security vulnerability, please report it to Grant7777.
 ________________________________________________________________________________________________________________________
 
 **Please do not report security vulnerabilities through public issues, discussions, or pull requests.**
 
-Instead, please DM the owner's discord which is radmanplays#0000
+Instead, please DM the owner's discord which is .grant7777#0000
 
 Please include as much of the information listed below as you can to help us better understand and resolve the issue:
 
