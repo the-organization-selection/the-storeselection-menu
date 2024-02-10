@@ -9,6 +9,9 @@ The better-unblocked game's website.
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/selenite-cc/selenite)
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/selenite-cc/selenite)
 ## Contributors
-[![Contrib](https://contrib.rocks/image?repo=selenite-cc/selenite#)](https://github.com/selenite-cc/selenite/graphs/contributors)
+ <a href="https://github.com/the-organization-selection/the-storeselection-menu/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=the-organization-selection/the-storeselection-menu" />
+</a>
+
 ## Support
 Join our [discord server](https://discord.gg/WDZhkdFyF4) to contact our support team free of charge for any reason 24/7.
