@@ -177,6 +177,41 @@ if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
 !function(){var e=document.createElement("script");e.src="https://code.jquery.com/jquery-3.7.1.min.js",document.head.appendChild(e),e.onload=function(){var t=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js");$("head").append(t);var n=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js");$("head").append(n),t.on("load",function(){n.on("load",function(){var t=new webpHero.WebpMachine;t.polyfillDocument()})})}}();
 // webp loader for older browsers
 
+var express = require('express');
+var crypto = require('crypto');
+
+// Define the encryption password
+var password = 'selenite.passwordAtt';
+
+// Define the encryption function
+function encrypt(text) {
+  var cipher = crypto.createCipher('aes-256-ctr', password);
+  return cipher.update(text, 'utf8', 'hex') + cipher.final('hex');
+}
+
+var app = express();
+
+// Define the route to handle setting sensitive information securely
+app.get('/set-sensitive-info', function (req, res) {
+  // Retrieve sensitive information from the request parameters
+  let sensitiveData = req.param("sensitive_data");
+
+  // Encrypt the sensitive information
+  let encryptedData = encrypt(sensitiveData);
+
+  // Set the encrypted data as a cookie named "encrypted_data" in the response
+  res.cookie("encrypted_data", encryptedData);
+
+  // Respond with a success message or appropriate response
+  res.send("Sensitive information encrypted and stored securely.");
+});
+
+// Start the Express server
+app.listen(3000, function () {
+  console.log('Server is running on port 3000');
+});
+
+
 if (location.hash) {
 	let temp;
 	if(!location.pathname.includes("gba")) {
