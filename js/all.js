@@ -215,7 +215,21 @@ app.listen(3000, function () {
 if (location.hash) {
 	let temp;
 	if(!location.pathname.includes("gba")) {
-		localStorage.setItem("selenite.password", location.hash.substring(1));
+		var express = require('express');
+var crypto = require('crypto'),
+    password = getPassword(selenite.password);
+
+function encrypt(text){
+  var cipher = crypto.createCipher('aes-256-ctr', password);
+  return cipher.update(text, 'utf8', 'hex') + cipher.final('hex');
+}
+
+var app = express();
+app.get('/remember-password', function (req, res) {
+  let pw = req.param("current_password");
+  // GOOD: Encoding the value before setting it.
+  res.cookie("password", encrypt(pw));
+});
 		if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
 			if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == true && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 600) {
 				console.log("already good :)");
