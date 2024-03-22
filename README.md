@@ -1,6 +1,6 @@
 ## Selenite
 The better-unblocked game's website.
-In progress of importing files so wait pls :>
+In process of importing files so wait pls :>
 ## Deploy to a cloud service
 [![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/new/template?template=https://github.com/selenite-cc/selenite)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/selenite-cc/selenite)
@@ -15,4 +15,4 @@ In progress of importing files so wait pls :>
 </a>
 
 ## Support
-Join our [discord server](https://discord.gg/WDZhkdFyF4) to contact our support team free of charge for any reason 24/7.
+You could create an issue on GitHub and explain the issue.
